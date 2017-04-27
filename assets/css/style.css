@@ -173,7 +173,7 @@ h1.show{
 
 nav {
     position: relative;
-	top: 50vh;
+	top: calc(55vh + 5px);
 	width: 100%;
 	z-index: 100;
     overflow: hidden;
@@ -221,8 +221,9 @@ nav ul li a {
  	color: #FFFFFF;
 	text-align: center;
 	font-size: 1.3rem;
-	border: 1px solid #FFFFFF;
-	border-radius: 2px;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 5px solid #FFFFFF;
+	/*border-radius: 2px;*/
 	overflow: hidden;
 	z-index: 0;
 	cursor: pointer;
@@ -235,7 +236,7 @@ nav ul li a:before {
 	z-index: -1;
 	width: 150%;
 	height: 200%;
-	top: -50%;
+	top: 150%;
 	left: -25%;
 	right: 0;
 	bottom: 0;
@@ -247,7 +248,7 @@ nav ul li a:before {
 }
 
 nav ul li a:hover:before{
-	transform: scaleY(1);
+	transform: scaleY(-1);
 }
 
 nav ul li a:hover {

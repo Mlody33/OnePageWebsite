@@ -230,7 +230,6 @@ $(document).ready(function () {
 		showSkillProgress();
         showAsideFigure();
         showPictureOfGallery();
-        console.log($('.hero-image').height());
 	});
 	
 	$('.hero-image').click(function () {

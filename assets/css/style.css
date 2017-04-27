@@ -35,10 +35,11 @@ p {
 main{
     float: left;
 	z-index: 0;
+	margin-top: 70vh;
 }
 
 main.fixed{
-    margin-top: calc(350px + 50px);
+    /*margin-top: calc(350px + 50px);*/
 }
 
 /* ************************************ HERO IMAGE ****************** */
@@ -171,8 +172,8 @@ h1.show{
 /* ************************************ MENU ****************** */
 
 nav {
-    float: left;
-    margin-top: 100vh;
+    position: relative;
+	top: 50vh;
 	width: 100%;
 	z-index: 100;
     overflow: hidden;
@@ -182,13 +183,13 @@ nav.fixed{
 	position: fixed;
 	top: 0px;
 	left: 0px;
-    margin-top: 0px;
 }
 
 nav ul {
-	float: left;
-	width: 100%;
-	margin: 0;
+	position: relative;
+	top: 0px;
+	width: calc((150px + 24px) * 6);
+	margin: 0 auto;
  	padding: 0;
  	list-style-type: none;
  	background: #4981B9;
@@ -196,18 +197,13 @@ nav ul {
 }
 
 nav ul li {
-	float: left;
-	width: calc(100% / 6 - 2px);
-	margin: 0;
+	position: relative;
+	top: 0px;
+	display: inline-block;
+	width: 150px;
+	margin: 0 10px;
 	padding: 0;
-    margin-bottom: -1px;
-	margin-right: 2px;
 	text-transform: uppercase;
-}
-
-nav ul li:nth-child(6){
-	margin-right: 0px;
-	width: calc(100% / 6);
 }
 
 nav ul li:last-child{    
@@ -219,12 +215,14 @@ nav ul li a {
 	display: inline-block;
 	position: relative;
 	width: 100%;
-	background: #FFFFFF;
+	background: #4981B9;
 	padding: 16px 0;
 	text-decoration: none;
- 	color: #4981B9;
+ 	color: #FFFFFF;
 	text-align: center;
 	font-size: 1.3rem;
+	border: 1px solid #FFFFFF;
+	border-radius: 2px;
 	overflow: hidden;
 	z-index: 0;
 	cursor: pointer;
@@ -242,7 +240,7 @@ nav ul li a:before {
 	right: 0;
 	bottom: 0;
 	border-radius: 50%;
-	background: #4981B9;	
+	background: #FFFFFF;	
 	transform: scaleY(0);
 	transform-origin: 0 0;
 	transition: all .3s ease-out;
@@ -253,7 +251,7 @@ nav ul li a:hover:before{
 }
 
 nav ul li a:hover {
-	color: #FFFFFF;
+	color: #4981B9;
 }
 
 nav ul li a.small{

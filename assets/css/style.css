@@ -35,11 +35,10 @@ p {
 main{
     float: left;
 	z-index: 0;
-	margin-top: 70vh;
 }
 
 main.fixed{
-    /*margin-top: calc(350px + 50px);*/
+    margin-top: calc(50vh + 53px);
 }
 
 /* ************************************ HERO IMAGE ****************** */
@@ -50,7 +49,7 @@ header.hero-image {
 	left: 0px;
 	z-index: -1;
 	width: 100%;
-	height: 70vh;
+	height: 50vh;
 	background: #4981B9;
     background-position: 50% 0%;
     background-size: 100%;
@@ -172,9 +171,9 @@ h1.show{
 /* ************************************ MENU ****************** */
 
 nav {
-    position: relative;
-	top: calc(55vh + 5px);
+    float: left;
 	width: 100%;
+	margin-top: 50vh;
 	z-index: 100;
     overflow: hidden;
 }
@@ -183,13 +182,13 @@ nav.fixed{
 	position: fixed;
 	top: 0px;
 	left: 0px;
+	margin-top: 0;
 }
 
 nav ul {
-	position: relative;
-	top: 0px;
-	width: calc((150px + 24px) * 6);
-	margin: 0 auto;
+	float: left;
+	width: 100%;
+	margin: 0;
  	padding: 0;
  	list-style-type: none;
  	background: #4981B9;
@@ -197,11 +196,8 @@ nav ul {
 }
 
 nav ul li {
-	position: relative;
-	top: 0px;
-	display: inline-block;
-	width: 150px;
-	margin: 0 10px;
+	float: left;
+	width: calc((100vw - 17px) / 6);
 	padding: 0;
 	text-transform: uppercase;
 }
@@ -215,15 +211,12 @@ nav ul li a {
 	display: inline-block;
 	position: relative;
 	width: 100%;
-	background: #4981B9;
+	background: #FFFFFF;
 	padding: 16px 0;
 	text-decoration: none;
- 	color: #FFFFFF;
+ 	color: #4981B9;
 	text-align: center;
 	font-size: 1.3rem;
-	border-top: 1px solid #FFFFFF;
-	border-bottom: 5px solid #FFFFFF;
-	/*border-radius: 2px;*/
 	overflow: hidden;
 	z-index: 0;
 	cursor: pointer;
@@ -236,23 +229,23 @@ nav ul li a:before {
 	z-index: -1;
 	width: 150%;
 	height: 200%;
-	top: 150%;
+	top: -50%;
 	left: -25%;
 	right: 0;
 	bottom: 0;
 	border-radius: 50%;
-	background: #FFFFFF;	
+	background: #4981B9;	
 	transform: scaleY(0);
 	transform-origin: 0 0;
 	transition: all .3s ease-out;
 }
 
 nav ul li a:hover:before{
-	transform: scaleY(-1);
+	transform: scaleY(1);
 }
 
 nav ul li a:hover {
-	color: #4981B9;
+	color: #FFFFFF;
 }
 
 nav ul li a.small{

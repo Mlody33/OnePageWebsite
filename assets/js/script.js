@@ -95,28 +95,28 @@ function imagesSlider(szybkosc) {
 function hideHeroImageContent() {
     "use strict";
     unfocusLogo(100);
-    $('svg.hero-logo-txt').removeClass('show');
+    // $('svg.hero-logo-txt').removeClass('show');
     $('h1.hero-slogan').removeClass('show');
 }
 
 function showHeroImageContent() {
     "use strict";
     unfocusLogo(0);
-	setTimeout(function () {focusLogo(100); }, 2000);
-    $('svg.hero-logo-txt').addClass('show');
-    setTimeout(function () {$('h1.hero-slogan').addClass('show'); }, 3200);
+	setTimeout(function () {focusLogo(100); }, 500);
+    // $('svg.hero-logo-txt').addClass('show');
+    setTimeout(function () {$('h1.hero-slogan').addClass('show'); }, 600);
 }
 
 function menuController() {
     "use strict";
-	if ($(window).scrollTop() >= 350) {
+	if ($(window).scrollTop() >= $('.hero-image').height()) {
 		$('nav').addClass('fixed');
         $('main').addClass('fixed');
 	} else {
 		$('nav').removeClass('fixed');
         $('main').removeClass('fixed');
 	}
-    if ($(window).scrollTop() >= 450) {
+    if ($(window).scrollTop() >= $('.hero-image').height() + 100) {
         $('nav ul li a').addClass('small');
     } else {
         $('nav ul li a').removeClass('small');

@@ -58,11 +58,18 @@ header.hero-image {
     transition: all .2s linear;
 }
 
-header div.hero-logo{
+header div.wrap_logo{
 	position: relative;
 	top: 100px;
 	margin: 0 auto;
-	display: block;
+	width: 300px;
+	text-align: center;
+	height: 90px;
+	/*border: 1px solid #fff;*/
+}
+
+header div.hero-logo{
+	float: left;
 	width: 90px;
 	height: 90px;
 }
@@ -116,13 +123,11 @@ svg.show{
 }
 
 h1.hero-slogan {
-	position: relative;
-	top: 70px;
-	display: block;	
+	float: left;
 	font-family: 'Comfortaa', sans-serif;
 	letter-spacing: -0.06em;
 	color: #fff;
-	margin-top: 0px;
+	margin-left: 20px;
 	padding-bottom: 0px;
 	font-size: 7rem;
     opacity: 0;

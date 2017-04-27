@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive web design</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<script src="assets/js/jquery-3.1.0.js"></script>
+	<script src="assets/js/script.js"></script>
+</head>
+<body>
+	<header class="hero-image">
+		<svg class="hero-logo" viewBox="0 0 500 500">
+  			<g transform="translate(0,-552)">
+  				<path class="line" d="m 371.32656,695.21665 113.17392,17.82981 c 7.74176,1.21968 15.39138,-6.40726 14.14674,-14.14312 L 480.49437,586.0768 c -1.24464,-7.73588 -6.4089,-12.89881 -14.14675,-14.14314 L 353.49218,553.78545 c -7.73784,-1.24433 -15.36673,6.40335 -14.14675,14.14313 l 17.83439,113.14494 c 1.21997,7.73977 6.40498,12.92346 14.14674,14.14313 z m -243.16275,0.0928 -113.173923,17.82982 C 7.2481232,714.35884 -0.40150733,706.73191 0.84313638,698.99604 L 18.995989,586.16948 c 1.244643,-7.73585 6.408909,-12.8988 14.146749,-14.14313 L 145.9982,553.87814 c 7.73783,-1.24432 15.36673,6.40337 14.14675,14.14315 l -17.83439,113.14494 c -1.21997,7.73979 -6.40498,12.92345 -14.14675,14.14312 z m 0.0927,214.36401 L 15.08257,891.84359 C 7.340844,890.62387 -0.30878646,898.25081 0.93585738,905.98667 L 19.088709,1018.8134 c 1.244644,7.7357 6.40891,12.8987 14.14675,14.1429 l 112.855471,18.1483 c 7.73784,1.2444 15.36674,-6.4035 14.14676,-14.1432 L 142.4033,923.81649 c -1.21997,-7.73978 -6.40498,-12.92346 -14.14675,-14.14313 z m 243.57958,0 113.17396,-17.82982 c 7.74177,-1.21967 15.39139,6.40727 14.14676,14.14313 l -18.15286,112.82663 c -1.24464,7.7358 -6.40891,12.8987 -14.14675,14.1431 l -112.85549,18.1481 c -7.73783,1.2444 -15.36673,-6.4033 -14.14675,-14.1432 l 17.83439,-113.14481 c 1.21997,-7.73978 6.40498,-12.92346 14.14674,-14.14313 z m -51.97877,127.52774 17.83439,-112.76358 c 1.2233,-7.73485 -7.89283,-14.13522 -17.69692,-14.13522 l -141.5752,0 c -9.80409,0 -18.85298,6.39005 -17.69692,14.13522 l 16.87896,113.08188 c 1.15608,7.7451 7.89287,14.1644 17.69691,14.1351 l 106.86186,-0.3183 c 9.80406,-0.029 16.47361,-6.4004 17.69692,-14.1351 z m 2.5478,-469.67819 17.83439,112.76352 c 1.2233,7.73485 -7.89283,14.13524 -17.69692,14.13524 l -141.57522,0 c -9.80409,0 -18.85297,-6.39007 -17.69692,-14.13524 l 16.87897,-113.0819 c 1.15607,-7.74516 7.89287,-14.16446 17.69689,-14.13526 l 106.86189,0.31841 c 9.80406,0.0293 16.47361,6.40041 17.69692,14.13523 z M 484.67525,731.95654 371.88288,714.12673 c -7.73683,-1.22301 -14.13886,7.89079 -14.13886,17.69236 l 0,141.539 c 0,9.80159 6.39171,18.84816 14.13886,17.69239 l 113.11085,-16.87464 c 7.74714,-1.15579 14.16807,-7.89085 14.13887,-17.69237 l -0.31848,-106.83454 c -0.0293,-9.80155 -6.40207,-16.46939 -14.13887,-17.69239 z M 15.268798,731.41684 128.06117,713.58702 c 7.73683,-1.22299 14.13887,7.89081 14.13887,17.6924 l 0,141.53901 c 0,9.80159 -6.39172,18.84815 -14.13887,17.69239 L 14.950331,873.63618 C 7.2031804,872.48039 0.78224982,865.74532 0.81146256,855.94379 L 1.1299311,749.10923 c 0.029248,-9.80155 6.4020619,-16.46938 14.1388669,-17.69239 z m 164.097302,-17.69497 141.42647,0 c 9.79378,0 17.67831,7.8825 17.67831,17.67378 l 0,141.39028 c 0,9.79126 -7.88453,17.67376 -17.67831,17.67376 l -141.42647,0 c -9.79378,0 -17.67831,-7.8825 -17.67831,-17.67376 l 0,-141.39028 c 0,-9.79128 7.88453,-17.67378 17.67831,-17.67378 z" />
+  			</g>
+		</svg>
+		<h1 class="hero-slogan">Mobile. Website. Desktop.</h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="#"><i class="fa fa-home fa-1x"></i>Start</a></li>
+			<li><a href="#"><i class=" fa fa-hashtag fa-1x"></i>O mnie</a></li>
+			<li><a href="#"><i class="fa fa-cogs fa-1x"></i>Oferta</a></li>
+			<li><a href="#"><i class="fa fa-certificate fa-1x"></i>Referencje</a></li>
+			<li><a href="#"><i class="fa fa-picture-o fa-1x"></i>Projekty</a></li>
+			<li><a href="#"><i class="fa fa-comments fa-1x"></i>Pytania</a></li>
+		</ul>
+	</nav>
+	<main>
+		<div class="reference">
+			<article>
+				<h2>Kim jestem?</h2>
+				<aside class="left">
+					<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac erat erat. Sed aliquet cursus eros, quis feugiat sapien sollicitudin id. Nulla tincidunt sit amet metus a tincidunt</h3>
+					<p>Aenean ut libero porta, vulputate dui non, faucibus orci. Praesent sagittis sed lectus sit amet ornare. Cras nisi lorem, pulvinar tempus cursus nec, hendrerit nec turpis. Mauris vel purus id eros volutpat mollis. Ut suscipit, tortor ac varius viverra, ipsum diam porta leo, molestie tempus justo enim eu tellus. Morbi condimentum posuere purus, vitae pulvinar leo placerat in. Fusce feugiat ipsum eu lorem luctus, ac rhoncus dui vestibulum. Morbi interdum libero ut erat aliquet ornare eu a mi. Nullam tellus lectus, auctor vel nunc sit amet, cursus blandit dui. Phasellus ultrices nibh eu pharetra bibendum. Nam et lacinia eros.</p>
+				</aside>
+				<figure class="right">
+					<i class="fa fa-hashtag fa-5x page-color"></i>
+				</figure>
+			</article>
+		</div>
+		<div class="reference">
+			<article>
+				<h2 class="right">Co umiem zrobić</h2>
+				<aside class="right">
+					<h3>Integer non mollis dolor. Phasellus viverra mauris et sapien placerat, in finibus lorem ultricies. Nam eu semper lorem, nec scelerisque metus. Sed placerat efficitur ornare.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel malesuada eros, ut rutrum ipsum. Integer non mollis dolor. Phasellus viverra mauris et sapien placerat, in finibus lorem ultricies. Nam eu semper lorem, nec scelerisque metus. Sed placerat efficitur ornare. Donec pharetra, velit nec auctor faucibus, nibh ante facilisis nunc, eu pharetra libero nisl at nibh. Morbi eleifend pellentesque egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla nec metus nec aliquet. Praesent consequat ipsum arcu, et posuere lectus ultricies ut.</p>
+				</aside>
+				<figure class="left">
+					<i class="fa fa-cogs fa-5x page-color"></i>
+				</figure>
+				<aside class="full">
+					<h3>Sed placerat efficitur ornare. Donec pharetra, velit nec auctor faucibus, nibh ante facilisis nunc, eu pharetra libero nisl at nibh. Morbi eleifend pellentesque egestas.</h3>
+					<p>Nunc vehicula, sapien a interdum posuere, orci purus vestibulum quam, a commodo nunc quam sed nisi. Maecenas tristique, dui at ultricies iaculis, felis neque consequat dui, id blandit nisl dui at erat. Duis vel lacus eleifend, vulputate nibh quis, maximus dui. Morbi iaculis augue vitae magna molestie egestas. Morbi posuere turpis eu mauris aliquet, sit amet vehicula eros ultricies. Nam mollis tellus ex, quis semper nulla dictum quis. Nunc sagittis ligula eu enim cursus iaculis. Sed mollis diam id aliquet lacinia. Maecenas risus lectus, cursus sed facilisis eu, consequat quis magna. In dapibus quam in massa pulvinar, eget varius felis imperdiet. Pellentesque cursus ullamcorper bibendum.</p>
+				</aside>
+			</article>
+		</div>
+		<div class="reference">
+			<article>
+				<h2>Technologie jakie używam</h2>
+				<div class="skill-content">
+					<p class="describe-skill left twice">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut sapien lobortis, pretium tellus at, ullamcorper libero. Nullam dictum est mi, et rutrum dui pretium vitae. Duis tempus mauris ac dapibus tincidunt. Nam porta tellus quis neque pulvinar volutpat. Aliquam orci arcu, vulputate vel convallis ut, sodales nec leo</p>
+					<div class="skill-bar right progress-95">
+						<div class="name">CSS3</div>
+						<div class="percent">95%</div>
+					</div>
+					<div class="skill-bar right progress-95">
+						<div class="name">HTML5</div>
+						<div class="percent">95%</div>
+					</div>
+				</div>
+				<div class="skill-content">
+					<p class="describe-skill right">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut sapien lobortis, pretium tellus at, ullamcorper libero. Nullam dictum est mi, et rutrum dui pretium vitae. Duis tempus mauris ac dapibus tincidunt. Nam porta tellus quis neque pulvinar volutpat. Aliquam orci arcu, vulputate vel convallis ut, sodales nec leo
+					</p>
+					<div class="skill-bar left progress-80">
+						<div class="name">JQUERY</div>
+						<div class="percent">80%</div>
+					</div>
+				</div>
+				<div class="skill-content">
+					<p class="describe-skill left twice" >
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut sapien lobortis, pretium tellus at, ullamcorper libero. Nullam dictum est mi, et rutrum dui pretium vitae. Duis tempus mauris ac dapibus tincidunt. Nam porta tellus quis neque pulvinar volutpat. Aliquam orci arcu, vulputate vel convallis ut, sodales nec leo
+					</p>
+					<div class="skill-bar right progress-85">
+						<div class="name">SQL</div>
+						<div class="percent">85%</div>
+					</div>
+					<div class="skill-bar right progress-75">
+						<div class="name">PHP7</div>
+						<div class="percent">75%</div>
+					</div>
+				</div>
+				<div class="skill-content">
+					<p class="describe-skill right twice">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut sapien lobortis, pretium tellus at, ullamcorper libero. Nullam dictum est mi, et rutrum dui pretium vitae. Duis tempus mauris ac dapibus tincidunt. Nam porta tellus quis neque pulvinar volutpat. Aliquam orci arcu, vulputate vel convallis ut, sodales nec leo
+					</p>
+					<div class="skill-bar left progress-85">
+						<div class="name">JAVA</div>
+						<div class="percent">85%</div>
+					</div>
+					<div class="skill-bar left progress-70">
+						<div class="name">C / C++</div>
+						<div class="percent">70%</div>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="reference">
+			<article>
+				<h2>Zaprojektowane strony</h2>	
+				<p>Suspendisse vulputate, nunc nec scelerisque egestas, metus elit varius orci, vel tristique magna tortor et mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+				<section class="gallery">
+					<img alt="img-n" src="assets/img/1.jpg"/>
+					<img alt="img-n" src="assets/img/2.jpg"/>
+					<img alt="img-n" src="assets/img/10.jpg"/>
+					<img alt="img-n" src="assets/img/6.jpg"/>					
+				</section>
+			</article>
+		</div>
+		<div class="reference">
+			<article>
+				<h2 class="right">Zadaj pytanie</h2>
+				<figure class="left">
+					<i class="fa fa-comments-o fa-5x page-color"></i>
+				</figure>
+				<aside class="right">
+					<section class="contact-details">
+						<p><i class="fa fa-phone-square"></i>Tel: +48 111 222 333</p>
+						<p><i class="fa fa-envelope"></i>Mail: kontakt@mwd.ugu.pl</p>
+						<p><i class="fa fa-map-marker"></i>Kraj: Polska</p>
+					</section>
+					<form>
+						<p>Nawiąż kontakt do współpracy ze mną</p>
+						<input name="topic" type="text" placeholder="Temat" required/>
+						<input name="email" type="email" placeholder="Email" required/>
+						<textarea name="message" placeholder="Wiadomość" required></textarea>
+						<input type="submit" value="Wyślij">
+					</form>
+				</aside>
+			</article>
+		</div>
+	</main>
+	<footer>
+		<p>Mobile. Website. Desktop.</p>
+		<ul>
+			<li><a href="#"><i class="fa fa-home fa-1x"></i>Start</a></li>
+			<li><a href="#"><i class=" fa fa-hashtag fa-1x"></i>O mnie</a></li>
+			<li><a href="#"><i class="fa fa-cogs fa-1x"></i>Oferta</a></li>
+			<li><a href="#"><i class="fa fa-certificate fa-1x"></i>Referencje</a></li>
+			<li><a href="#"><i class="fa fa-picture-o fa-1x"></i>Projekty</a></li>
+			<li><a href="#"><i class="fa fa-comments fa-1x"></i>Pytania</a></li>
+		</ul>
+		<p class="copyright">copyright © 2016 mwd.ugu.pl</p>
+	</footer>
+</body>
+</html>
+
+

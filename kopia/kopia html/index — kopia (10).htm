@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive web design</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="assets/css/style — kopia (10).css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<script src="assets/js/jquery-3.1.0.js"></script>
+	<script src="assets/js/script.js"></script>
+</head>
+<body>
+	<header class="hero-image">
+		<div class="hero-logo">
+			<svg viewBox="0 0 180 180">
+				<g transform="translate(0,-872.36214)">
+					<path d="M 145.4182,1030.8131 41.156053,1047.2432 C 34.02391,1048.3666 26.97664,1041.3386 28.123276,1034.21 L 44.846699,930.24151 c 1.146635,-7.12853 5.904246,-11.88612 13.032777,-13.03275 l 103.968774,-16.7234 c 7.12852,-1.14666 14.15668,5.90061 13.03275,13.03277 L 158.45098,1017.78 c -1.12391,7.1326 -5.90062,11.9087 -13.03278,13.0331 z" />
+				</g>
+			</svg>
+			<svg viewBox="0 0 180 180">
+				<g transform="translate(0,-872.36214)">
+					<path d="m 157.78217,930.65512 17.11168,103.70698 c 1.17372,7.1136 -7.57299,13 -16.9798,13 l -135.838292,0 c -9.406794,0 -18.0890048,-5.8768 -16.9798013,-13 L 21.290961,930.36232 c 1.109223,-7.12313 7.573027,-13.02686 16.979775,-13.00001 l 102.531624,0.29284 c 9.40677,0.0269 15.80606,5.88637 16.97981,12.99997 z" />
+				</g>
+			</svg>
+			<svg viewBox="0 0 180 180">
+				<g transform="translate(0,-872.36214)">
+					<path d="m 34.581807,1030.8131 104.262163,16.4301 c 7.13213,1.1239 14.1794,-5.9042 13.03275,-13.0328 L 135.15331,930.24164 c -1.14664,-7.12857 -5.90424,-11.88617 -13.03278,-13.03281 L 18.151778,900.4854 C 11.023247,899.33876 3.9950784,906.38604 5.1189972,913.51818 L 21.549036,1017.7803 c 1.123899,7.1322 5.900624,11.909 13.032771,13.0328 z" />
+				</g>
+			</svg>
+
+			<svg viewBox="0 0 180 180">
+				<g transform="translate(0,-872.36214)">
+					<path d="M 58.292905,894.58001 162,877.46831 c 7.11364,-1.17373 13,7.573 13,16.97981 l 0,135.83828 c 0,9.4068 -5.87688,18.089 -13,16.9798 L 58.000091,1031.0713 c -7.123128,-1.1093 -13.02686,-7.5731 -13,-16.9799 l 0.292817,-102.53159 c 0.02689,-9.40678 5.886384,-15.80606 12.999997,-16.9798 z" />
+				</g>
+			</svg>
+			<svg viewBox="0 0 180 180">
+				<g transform="translate(0,-872.36214)">
+					<path d="m 22.000001,877.3622 135.999979,0 c 9.41799,0 17,7.58202 17,17 l 0,136.0001 c 0,9.418 -7.58201,16.9999 -17,16.9999 l -135.999979,0 c -9.417986,0 -17.0000016,-7.5819 -17.0000016,-16.9999 l 0,-136.0001 c 0,-9.41798 7.5820156,-17 17.0000016,-17 z" />
+				</g>
+			</svg>
+			<svg viewBox="0 0 180 180">
+				<g transform="translate(0,-872.36214)">
+					<path d="M 121.70709,894.58002 17.999995,877.46834 C 10.886347,876.29458 5,885.04131 5,894.44811 l 0,135.83819 c 0,9.4069 5.87686,18.0891 12.999995,16.9799 l 103.999905,-16.195 c 7.12313,-1.1092 13.02686,-7.573 13.00001,-16.9798 l -0.29282,-102.53157 c -0.0269,-9.40678 -5.88639,-15.80607 -13,-16.97981 z" />
+				</g>
+			</svg>
+
+			<svg viewBox="0 0 180 180">
+				<g transform="translate(0,-872.36214)">
+					<path d="M 145.41814,893.91127 41.156016,877.48118 c -7.132109,-1.12395 -14.179374,5.90421 -13.03274,13.03275 l 16.723418,103.96892 c 1.146636,7.12835 5.904246,11.88605 13.032775,13.03265 l 103.968741,16.7234 c 7.12854,1.1467 14.1567,-5.9007 13.0328,-13.0328 L 158.45096,906.94398 c -1.1239,-7.13215 -5.90062,-11.90887 -13.03277,-13.0328 z" />
+				</g>
+			</svg>
+			<svg viewBox="0 0 180 180">
+				<g transform="translate(0,-872.36214)">
+					<path d="m 157.78214,994.06948 17.1117,-103.70731 c 1.17374,-7.11365 -7.57298,-12.99999 -16.9798,-12.99999 l -135.838273,0 c -9.406817,0 -18.0890298,5.87685 -16.9798071,12.99999 L 21.290941,994.36218 c 1.109232,7.12302 7.573038,13.02672 16.979796,12.99982 l 102.531603,-0.2927 c 9.40678,-0.027 15.80607,-5.8864 16.9798,-12.99982 z" />
+				</g>
+			</svg>
+			<svg viewBox="0 0 180 180">
+				<g transform="translate(0,-872.36214)">
+					<path d="M 34.581788,893.91124 138.84394,877.48118 c 7.13215,-1.1239 14.17941,5.90426 13.03279,13.0328 L 135.1533,994.48295 c -1.14663,7.12835 -5.90424,11.88595 -13.03278,13.03275 l -103.968746,16.7232 c -7.128528,1.1467 -14.1566952,-5.9006 -13.0327768,-13.0328 L 21.54903,906.94404 c 1.1239,-7.13215 5.900623,-11.90888 13.032758,-13.0328 z" />
+				</g>
+			</svg>
+		</div>
+
+		<svg class="hero-logo-txt" viewbox="0 0 310 70">
+			<g transform="translate(50,-982.36218)">
+				<path d="m 246.29282,1037.8562 c 1.01952,0 2.15267,-1.1681 2.13768,-2.1875 -0.0146,-0.99 -1.14753,-2.0625 -2.13768,-2.0625 -0.99006,0 -2.12276,1.0725 -2.13732,2.0625 -0.015,1.0193 1.11788,2.1875 2.13732,2.1875 m -45.06317,-16.137 28.77085,0 c 0,-9.1245 -3.87505,-17.6586 -15.5625,-17.625 -9.87515,0.028 -16.8125,6.875 -16.8125,16.9375 0,10 6.75,16.8125 17,16.8125 5.75,0 10.5,-2.0625 13.75,-5.625 m -44.85755,10.1355 -0.0959,-57.9925 m -14.2863,9.19375 c 1.23197,0 2.07208,-1.07055 2.088,-2.31249 0.0159,-1.24195 -0.96823,-2.36652 -2.088,-2.375 -1.11977,-0.008 -2.17777,0.90657 -2.1875,2.375 -0.01,1.46843 0.95553,2.31249 2.1875,2.31249 m -0.054,48.76905 0,-42.3349 m -46.7325,-15.6279 0,58 m 1.79538,-22.2628 c 0.003,3.7876 0.94945,8.8501 3.39212,11.7448 2.83618,3.361 6.4375,6 11.75,6 9.5,0 15.75,-6.8125 15.75,-16.75 0,-10.125 -6.4375,-17 -15.875,-17 -5.1875,0 -8.82262,2.659 -11.625,6 -2.4465,2.9167 -3.39514,6.1983 -3.39212,10.0052 m -50.195179,0.8698 c 0,10 7.0625,16.875 17.375,16.875 10.249999,0 17.312499,-6.875 17.312499,-16.875 0,-10.0625 -7.0625,-16.875 -17.312499,-16.875 -10.3125,0 -17.375,6.8125 -17.375,16.875 m -13.405355,21.393 0,-53.318 -5.431069,0 -14.223327,32.958 -0.337564,0 m 0,0 -0.315836,-0 -13.935773,-32.958 -5.900623,0 0,53.318" />
+			</g>
+		</svg>
+		<svg class="hero-logo-txt" viewbox="0 0 310 70">
+			<g transform="translate(0,-982.36218)">
+				<path d="m 293.61507,1038.225 c 0.97402,0 1.95162,-1.2136 1.93735,-2.1875 -0.0138,-0.9431 -0.99411,-2.0625 -1.93735,-2.0625 -0.94326,0 -1.92368,1.1193 -1.9375,2.0625 -0.0143,0.974 0.96344,2.1875 1.9375,2.1875 m -42.91857,-14.137 29.125,0 c 0.875,-12 -3.875,-19.625 -15.5625,-19.625 -9.875,0.062 -16.8125,6.875 -16.8125,16.9375 0,10 6.75,16.8125 17,16.8125 5.75,0 10.5,-2.0625 13.75,-5.625 m -64.24808,-23.0181 24.6966,-4e-4 m -15.78543,-11.9325 0,11.0128 0,19.9375 c 0,6.8125 4.3125,9.6875 9.3125,9.6875 2.8125,0 5.5625,-0.875 8.1875,-2.4375 M 204.209,994.22475 c 1.06107,0 2.18044,-1.25145 2.1875,-2.3125 0.007,-1.07628 -1.1112,-2.375 -2.1875,-2.375 -1.0763,0 -2.19466,1.29872 -2.1875,2.375 0.007,1.06105 1.12643,2.3125 2.1875,2.3125 m 0.054,6.19125 0,42.25 m -13.2094,-34.8121 c -3,-2.125 -8.2001,-3.7538 -12.3876,-3.7538 -6.375,0 -12.56505,2.4306 -12.18988,9.9018 0.37517,7.4712 24.43988,3.0733 24.37738,15.1358 0,6.8125 -6.0625,9.0745 -12.75,9.0745 -4.875,0 -10.0625,-1.625 -13.375,-4.625 m -41.68061,-11.8117 c 0.0486,3.7256 4,10.4375 4,10.4375 2.4375,3.875 6.4375,6 11.75,6 9.5,0 15.75,-6.8125 15.75,-16.75 0,-10.125 -6.4375,-17 -15.875,-17 -5.1875,0 -9.1875,2.125 -11.625,6 0,0 -4.05219,7.3132 -4,11.3125 m -1.1875,-36.78783 -0.12627,57.69133 m -42.704621,-18.591 29.125001,0 c 0.875,-12 -3.875,-19.625 -15.562501,-19.625 -9.875,0.062 -16.8125,6.875 -16.8125,16.9375 0,10 6.75,16.8125 17,16.8125 5.750002,0 10.500001,-2.0625 13.750001,-5.625 m -97.02925,-46.075 14.5,51.75 5.625,0 8.669643,-35.0253 1.795536,0 m 0,0 1.876339,0 8.533482,35.0253 5.5625,0 14.625,-51.75" />
+			</g>
+		</svg>
+		<svg class="hero-logo-txt" viewbox="0 0 310 70">
+			<g transform="translate(0,-982.36218)">
+				<path d="m 297.785,1031.075 c -0.94327,0 -1.92369,1.1193 -1.9375,2.0625 -0.0143,0.974 0.96344,2.1875 1.9375,2.1875 0.97406,0 1.95177,-1.2135 1.9375,-2.1875 -0.0138,-0.9432 -0.99423,-2.0625 -1.9375,-2.0625 z m -45.86775,-33.6497 0,54.9368 m 3.1875,-31.3622 c 0.004,3.6858 2,10.8125 2,10.8125 2.4375,3.875 6.4375,6 11.75,6 9.5,0 15.75,-6.8125 15.75,-16.75 0,-10.125 -6.4375,-17 -15.875,-17 -5.1875,0 -9.1875,2.125 -11.625,6 0,0 -2.00377,7.2517 -2,10.9375 m -52.0875,-0.063 c 0,10 7.0625,16.875 17.375,16.875 10.25,0 17.3125,-6.875 17.3125,-16.875 0,-10.0625 -7.0625,-16.875 -17.3125,-16.875 -10.3125,0 -17.375,6.8125 -17.375,16.875 m -11.76039,-12.3609 -22.0625,0 m 8.23611,-12.13869 0,11.81229 0,19.9375 c 0,6.8125 4.3125,9.6875 9.3125,9.6875 2.8125,0 5.5625,-0.875 8.1875,-2.4375 m -54.59256,-7.4734 c 8.65741,-7.5995 13.79056,-16.4163 22.78731,-19.265 m -17.91925,9.022 c 9.89311,12.7813 17.92395,19.4366 17.91667,24.6512 m -23.92362,-56.66492 0,56.68292 m -38.98393,-9.8834 c 3.3125,3 10.15278,5.3056 15.02778,5.3056 6.6875,0 12.85262,-3.5359 12.75,-8.6754 -0.19125,-9.5784 -23.79157,-5.6451 -24.38843,-15.2068 -0.32377,-5.1866 5.7257,-9.8299 12.1007,-9.8299 4.1875,0 10.625,1.25 13.625,3.375 m -69.08064,16.2119 31.125,0 c 0.875,-12 -3.875,-19.625 -15.5625,-19.625 -9.875,0.062 -16.8125,6.875 -16.8125,16.9375 0,10 6.75,16.8125 17,16.8125 5.75,0 10.5,-2.0625 13.75,-5.625 M 14.7,994.70152 l 0,43.16048 11.75,0 c 13.25,0 18.8125,-11.7499 18.8125,-24.3749 0,-12.6875 -5.5,-23.17435 -18.625,-23.17435 l -11.9375,0 0,4.38877" />
+			</g>
+		</svg>
+		<h1 class="hero-slogan">Planowanie wraz z projektowaniem i wdrażaniem stron internetowych.</h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="#">Start</a></li>
+			<li><a href="#">O mnie</a></li>
+			<li><a href="#">Oferta</a></li>
+			<li><a href="#">Referencje</a></li>
+			<li><a href="#">Projekty</a></li>
+			<li><a href="#">Pytania</a></li>
+		</ul>
+	</nav>
+	<main>
+		<div class="reference">
+			<article>
+				<h2>Kim jestem?</h2>
+				<aside class="left">
+					<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac erat erat. Sed aliquet cursus eros, quis feugiat sapien sollicitudin id. Nulla tincidunt sit amet metus a tincidunt</h3>
+					<p>Aenean ut libero porta, vulputate dui non, faucibus orci. Praesent sagittis sed lectus sit amet ornare. Cras nisi lorem, pulvinar tempus cursus nec, hendrerit nec turpis. Mauris vel purus id eros volutpat mollis. Ut suscipit, tortor ac varius viverra, ipsum diam porta leo, molestie tempus justo enim eu tellus. Morbi condimentum posuere purus, vitae pulvinar leo placerat in. Fusce feugiat ipsum eu lorem luctus, ac rhoncus dui vestibulum. Morbi interdum libero ut erat aliquet ornare eu a mi. Nullam tellus lectus, auctor vel nunc sit amet, cursus blandit dui. Phasellus ultrices nibh eu pharetra bibendum. Nam et lacinia eros.</p>
+				</aside>
+				<figure class="right">
+					<i class="fa fa-hashtag fa-5x page-color"></i>
+				</figure>
+			</article>
+		</div>
+		<div class="reference">
+			<article>
+				<h2 class="right">Co umiem zrobić</h2>
+				<aside class="right">
+					<h3>Integer non mollis dolor. Phasellus viverra mauris et sapien placerat, in finibus lorem ultricies. Nam eu semper lorem, nec scelerisque metus. Sed placerat efficitur ornare.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel malesuada eros, ut rutrum ipsum. Integer non mollis dolor. Phasellus viverra mauris et sapien placerat, in finibus lorem ultricies. Nam eu semper lorem, nec scelerisque metus. Sed placerat efficitur ornare. Donec pharetra, velit nec auctor faucibus, nibh ante facilisis nunc, eu pharetra libero nisl at nibh. Morbi eleifend pellentesque egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla nec metus nec aliquet. Praesent consequat ipsum arcu, et posuere lectus ultricies ut.</p>
+				</aside>
+				<figure class="left">
+					<i class="fa fa-cogs fa-5x page-color"></i>
+				</figure>
+				<aside class="full">
+					<h3>Sed placerat efficitur ornare. Donec pharetra, velit nec auctor faucibus, nibh ante facilisis nunc, eu pharetra libero nisl at nibh. Morbi eleifend pellentesque egestas.</h3>
+					<p>Nunc vehicula, sapien a interdum posuere, orci purus vestibulum quam, a commodo nunc quam sed nisi. Maecenas tristique, dui at ultricies iaculis, felis neque consequat dui, id blandit nisl dui at erat. Duis vel lacus eleifend, vulputate nibh quis, maximus dui. Morbi iaculis augue vitae magna molestie egestas. Morbi posuere turpis eu mauris aliquet, sit amet vehicula eros ultricies. Nam mollis tellus ex, quis semper nulla dictum quis. Nunc sagittis ligula eu enim cursus iaculis. Sed mollis diam id aliquet lacinia. Maecenas risus lectus, cursus sed facilisis eu, consequat quis magna. In dapibus quam in massa pulvinar, eget varius felis imperdiet. Pellentesque cursus ullamcorper bibendum.</p>
+				</aside>
+			</article>
+		</div>
+		<div class="reference">
+			<article>
+				<h2>Technologie jakie używam</h2>
+				<div class="skill-content">
+					<p class="describe-skill left twice">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut sapien lobortis, pretium tellus at, ullamcorper libero. Nullam dictum est mi, et rutrum dui pretium vitae. Duis tempus mauris ac dapibus tincidunt. Nam porta tellus quis neque pulvinar volutpat. Aliquam orci arcu, vulputate vel convallis ut, sodales nec leo</p>
+					<div class="skill-bar right progress-95">
+						<div class="name">CSS3</div>
+						<div class="percent">95%</div>
+					</div>
+					<div class="skill-bar right progress-95">
+						<div class="name">HTML5</div>
+						<div class="percent">95%</div>
+					</div>
+				</div>
+				<div class="skill-content">
+					<p class="describe-skill right">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut sapien lobortis, pretium tellus at, ullamcorper libero. Nullam dictum est mi, et rutrum dui pretium vitae. Duis tempus mauris ac dapibus tincidunt. Nam porta tellus quis neque pulvinar volutpat. Aliquam orci arcu, vulputate vel convallis ut, sodales nec leo
+					</p>
+					<div class="skill-bar left progress-80">
+						<div class="name">JQUERY</div>
+						<div class="percent">80%</div>
+					</div>
+				</div>
+				<div class="skill-content">
+					<p class="describe-skill left twice" >
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut sapien lobortis, pretium tellus at, ullamcorper libero. Nullam dictum est mi, et rutrum dui pretium vitae. Duis tempus mauris ac dapibus tincidunt. Nam porta tellus quis neque pulvinar volutpat. Aliquam orci arcu, vulputate vel convallis ut, sodales nec leo
+					</p>
+					<div class="skill-bar right progress-90">
+						<div class="name">SQL</div>
+						<div class="percent">90%</div>
+					</div>
+					<div class="skill-bar right progress-75">
+						<div class="name">PHP7</div>
+						<div class="percent">75%</div>
+					</div>
+				</div>
+				<div class="skill-content">
+					<p class="describe-skill right twice">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut sapien lobortis, pretium tellus at, ullamcorper libero. Nullam dictum est mi, et rutrum dui pretium vitae. Duis tempus mauris ac dapibus tincidunt. Nam porta tellus quis neque pulvinar volutpat. Aliquam orci arcu, vulputate vel convallis ut, sodales nec leo
+					</p>
+					<div class="skill-bar left progress-85">
+						<div class="name">JAVA</div>
+						<div class="percent">85%</div>
+					</div>
+					<div class="skill-bar left progress-70">
+						<div class="name">C / C++</div>
+						<div class="percent">70%</div>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="reference">
+			<article>
+				<h2>Zaprojektowane strony</h2>	
+				<p>Suspendisse vulputate, nunc nec scelerisque egestas, metus elit varius orci, vel tristique magna tortor et mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+			</article>
+			<section class="nav_slider">
+				<div class="button"><i class="fa fa-chevron-left" aria-hidden="true"></i>poprzedni</div>
+				<div class="button">zobacz</div>
+				<div class="button">następny<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+			</section>
+			<section class="gallery">
+				<!--<img alt="img-n" src="assets/img/1.jpg"/>-->
+    			<img alt="img-n" src="assets/img/2.jpg"/>
+    			<img alt="img-n" src="assets/img/10.jpg"/>
+    			<img alt="img-n" src="assets/img/8.jpg"/>
+    			<!--<img alt="img-n" src="assets/img/9.jpg"/>-->
+			</section>
+		</div>
+		<div class="reference">
+			<article>
+				<h2 class="right">Zadaj pytanie</h2>
+				<figure class="left">
+					<i class="fa fa-comments-o fa-5x page-color"></i>
+				</figure>
+				<aside class="right">
+					<section class="contact-details">
+						<p><i class="fa fa-phone-square"></i>Tel: +48 111 222 333</p>
+						<p><i class="fa fa-envelope"></i>Mail: kontakt@mwd.ugu.pl</p>
+						<p><i class="fa fa-map-marker"></i>Kraj: Polska</p>
+					</section>
+					<form>
+						<p>Nawiąż kontakt do współpracy ze mną</p>
+						<input name="topic" type="text" placeholder="Temat" required/>
+						<input name="email" type="email" placeholder="Email" required/>
+						<textarea name="message" placeholder="Wiadomość" required></textarea>
+						<input type="submit" value="Wyślij">
+					</form>
+				</aside>
+			</article>
+		</div>
+	</main>
+	<footer>
+		<p>Mobile. Website. Desktop.</p>
+		<p class="copyright">© 2016 Mobile. Website. Desktop. All rights reserved.</p>
+	</footer>
+</body>
+</html>
+
+

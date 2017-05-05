@@ -199,7 +199,7 @@ nav ul li a {
 	transition: all .15s linear;
 }
 
-li a:before {
+nav ul li a:before {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -216,11 +216,11 @@ li a:before {
 	transition: all .3s ease-out;
 }
 
-li a:hover:before{
+nav ul li a:hover:before{
 	transform: scaleY(1);
 }
 
-li a:hover {
+nav ul li a:hover {
 	color: #FFFFFF;
 }
 
@@ -230,16 +230,15 @@ nav ul li a.small{
 }
 
 
-nav > li {
+li.show-menu-button {
     display: none;
     height: 53px;
 	padding: 0;
-    margin: 2px;
-    border: 2px solid #4981B9;
+    border-bottom: 2px solid #333333;
 	text-transform: uppercase;
 }
 
-nav > li a {
+li.show-menu-button a {
     display: inline-block;
 	position: relative;
 	width: 100%;
@@ -258,23 +257,48 @@ nav > li a {
 
 
 @media screen and (max-width: 850px){
-    nav ul{
-        width: 50vw;
-        margin-top: -330px;
+    main, main.fixed {
+        margin-top: 380px;
     }
-    nav ul.show-menu{
-        margin-top: 0px;
+    nav, nav.fixed {
+        position: fixed;
+        top: 0px;
+        left: -305px;
+        width: 300px;
+        height: 100vh;
+        margin: 0;
+        background: #666666;
+        border-right: 5px solid #333333;
+        overflow: visible;
+        transition: all .2s linear;
     }
+    nav.show-menu{
+        left: 0px;
+    }
+    
     nav ul li {
 		float: left;
 		width: 100%;
+        border-bottom: 2px solid #333333;
 	}
-    nav > li{
-        float: right;
+    nav ul li a{
+        background: #444444;
+        color: #FFFFFF;
+    }
+    li.show-menu-button{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100%;
         display: block;
-        width: 200px;
-        height: 53px;
-        background: #f00;
+    }
+    li.show-menu-button a {
+        text-align: right;
+        padding: 12px 20px 13px 45px;
+        background: #444444;
+    }
+    li.show-menu-button a:hover{
+        color: #FFFFFF;
     }
 
     nav ul li a.small{

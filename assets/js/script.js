@@ -133,16 +133,14 @@ function menuController() {
 
 function showMobileMenu(isMenuHide) {
     "use strict";
-    $('nav ul').addClass('show-menu');
-//    $('.show-menu > a').html('Ukryj menu');
+    $('nav').addClass('show-menu');
     isMenuHide = false;
     return isMenuHide;
 }
 
 function hideMobileMenu(isMenuHide) {
     "use strict";
-    $('nav ul').removeClass('show-menu');
-//    $('.show-menu > a').html('Pokaz menu');
+    $('nav').removeClass('show-menu');
     isMenuHide = true;
     return isMenuHide;
 }

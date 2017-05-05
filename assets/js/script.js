@@ -124,25 +124,25 @@ function menuController() {
 		$('nav').removeClass('fixed');
         $('main').removeClass('fixed');
 	}
-    if ($(window).scrollTop() >= $('.hero-image').height() + 100) {
-        $('nav ul li a').addClass('small');
-    } else {
-        $('nav ul li a').removeClass('small');
-    }
+//    if ($(window).scrollTop() >= $('.hero-image').height() + 100) {
+//        $('nav ul li a').addClass('small');
+//    } else {
+//        $('nav ul li a').removeClass('small');
+//    }
 }
 
 function showMobileMenu(isMenuHide) {
     "use strict";
     $('nav ul').addClass('show-menu');
-    $('.show-menu > a').html('Ukryj menu');
+//    $('.show-menu > a').html('Ukryj menu');
     isMenuHide = false;
     return isMenuHide;
 }
 
 function hideMobileMenu(isMenuHide) {
     "use strict";
-    $('nav ul').removeClass('show_menu');
-    $('.show-menu > a').html('Pokaz menu');
+    $('nav ul').removeClass('show-menu');
+//    $('.show-menu > a').html('Pokaz menu');
     isMenuHide = true;
     return isMenuHide;
 }
@@ -150,7 +150,7 @@ function hideMobileMenu(isMenuHide) {
 function mobileMenuController() {
     "use strict";
     var isMenuHide = true;
-    $('.show-menu').click(function () {
+    $('.show-menu-button').click(function () {
         if (isMenuHide) {
             isMenuHide = showMobileMenu(isMenuHide);
         } else {
@@ -244,9 +244,6 @@ $(document).ready(function () {
         hideHeroImageContent();
         setTimeout(function () { showHeroImageContent(); }, 500);
     });
-    
-    
-
 
 	$('form').submit(function (e) {
 		e.preventDefault();

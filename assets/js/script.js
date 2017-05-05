@@ -223,6 +223,7 @@ $(document).ready(function () {
 	imagesSlider(500);
 	menuController();
     mobileMenuController();
+    hideMobileMenu();
 
 	scroll_to('nav > ul > li:nth-child(1)', 'start');
 	scroll_to('nav > ul > li:nth-child(2)', 'omnie');

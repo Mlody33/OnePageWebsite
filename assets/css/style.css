@@ -280,10 +280,13 @@ li.show-menu-button a {
 		float: left;
 		width: 100%;
         border-bottom: 2px solid #333333;
+        height: calc((100vh - 65px) / 6);
 	}
     nav ul li a{
         background: #444444;
         color: #FFFFFF;
+        font-size: 1.6rem;
+        padding: calc((((100vh - 65px) / 6) - 19px) / 2) 0;
     }
     li.show-menu-button{
         position: relative;

@@ -499,6 +499,7 @@ article figure.right {
 	margin: 20px;
 	background: #FFFFFF;
 	border-radius: 50%;
+    border: 1px solid #f00;
 }
 
 
@@ -532,7 +533,7 @@ article figure.right {
 	font-size: 2rem;
 	border-radius: 50%;
 	z-index: 7;
-	border: 3px solid #4981B9;
+	border: 2px solid #4981B9;
 }
 
 .skill-bar > .progress-line{
@@ -612,6 +613,9 @@ article figure.right {
 		width: calc(220px - 4px - 40px);
 		height: calc(220px - 4px - 40px);
 	}
+    .skill-bar > single {
+        
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -757,7 +761,7 @@ form > input[type='text'], form > input[type='email'] {
 	display: inline;
 	margin: 0;
 	padding: 10px;
-	min-width: calc((100% / 2) - 22px - 7px);
+	width: calc((100% / 2) - 22px - 7px);
 	min-height: 30px;
 	font-family: "Lato-Regular", sans-serif;
 	border: 1px solid #DDDDDD;
@@ -814,13 +818,15 @@ form > input[type='submit'].sent:hover {
     background: #4981B9;
     cursor: default;
 }
-form > input[type='submit']:focus{ background: #4981B9; }
-form > input[type='reset']:focus{ background: #000000; }
+
 form > input[type='text']:hover{ background: #FFFFFF; }
 form > input[type='email']:hover{ background: #FFFFFF; }
+form > textarea:hover { background: #FFFFFF; }
+
+form > input[type='submit']:focus{ background: #4981B9; }
+form > input[type='reset']:focus{ background: #000000; }
 form > input[type='text']:focus{ background: #FFFFFF; }
 form > input[type='email']:focus{ background: #FFFFFF; }
-form > textarea:hover { background: #FFFFFF; }
 form > textarea:focus {	background: #FFFFFF; }
 
 @media screen and (max-width: 500px) {

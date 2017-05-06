@@ -494,20 +494,19 @@ article figure.right {
 /*SKILL CIRCLE BAR ************************************ */
 
 .skill-bar {
-	width: calc(240px - 4px - 40px);
-	height: calc(240px - 4px - 40px);
-	margin: 20px;
-	background: #FFFFFF;
+	width: 200px;
+	height: 200px;
+	margin: 60px 20px 20px 20px;
 	border-radius: 50%;
+    background: #F8F8F8;
 }
 
 
 .skill-bar > .name {
 	position: relative;
-	width: calc(240px - 4px - 40px - 6px);
-	height: calc(240px - 4px - 40px - 6px);
-	margin-top: 3px;
-	margin-left: 3px;
+	width: calc(200px - 4px);
+	height: calc(200px - 4px);
+    margin: 2px;
 	background: #FFFFFF;
 	text-transform: uppercase;
 	border-radius: 50%;
@@ -524,23 +523,22 @@ article figure.right {
 	top: -95%;
 	left: 70%;
 	width: 55px;
-	height: calc(55px - 10px - 4px);
-	padding-top: calc(10px + 4px);
+	padding: calc(10px + 5.5px) 0px;
 	color: #636363;
 	background: #FFFFFF; 
 	text-align: center;
 	font-size: 2rem;
 	border-radius: 50%;
 	z-index: 7;
-	border: 3px solid #4981B9;
+	border: 2px solid #4981B9;
 }
 
 .skill-bar > .progress-line{
 	position: relative;
-	top: calc(-100% - 60px + 2px);
+	top: calc(-100% - 60px + 1px);
 	left: 0px;
-	width: calc(240px - 4px - 40px);
-	height: calc(240px - 4px - 40px);
+	width: 200px;
+	height: 200px;
 	background: linear-gradient(90deg, #F8F8F8 50%, #4981B9 50%);
 	border-radius: 50%;
 	z-index: 4;
@@ -550,8 +548,8 @@ article figure.right {
 	content: "";
 	position: absolute;
 	z-index: 5;
-	width: 3px;
-	height: 3px;
+	width: 2px;
+	height: 2px;
 	top: calc(100% - 3px);
 	left: 49%;
 	border-radius: 50%;
@@ -560,10 +558,10 @@ article figure.right {
 
 .skill-bar > .cover-half{
 	position: relative;
-	top: calc(-200% - 60px + 2px);
+	top: calc(-200% - 60px + 1px);
 	left: 0%;
-	width: calc(240px - 4px - 40px);
-	height: calc(240px - 4px - 40px);
+	width: 200px;
+	height: 200px;
 	margin-top: 0px;
 	background: linear-gradient(90deg, rgba(0,0,0,0) 50%, #4981B9 50%);
 	border-radius: 50%;
@@ -594,44 +592,46 @@ article figure.right {
 		text-align: left;
 	}
 	.skill-bar {
-		width: calc(220px - 4px - 40px);
-		height: calc(220px - 4px - 40px);
-		margin: 20px calc(((100% / 2) - 176px) / 2);
-		transition: all 1s linear;
+		width: 170px;
+	    height: 170px;
+		margin: 10px calc((100% - (170px * 2)) / 4);
 	}
+    .single {
+        margin: 10px calc((100% - 170px) / 2);
+    }
 	.skill-bar > .name {
-		width: calc(220px - 4px - 40px - 6px);
-		height: calc(220px - 4px - 40px - 6px);
+		width: calc(170px - 4px);
+	    height: calc(170px - 4px);
 		line-height: 170px;		
 	}
 	.skill-bar > .progress-line{
-		width: calc(220px - 4px - 40px);
-		height: calc(220px - 4px - 40px);
+		width: 170px;
+	    height: 170px;
 	}
 	.skill-bar > .cover-half{
-		width: calc(220px - 4px - 40px);
-		height: calc(220px - 4px - 40px);
+		width: 170px;
+	    height: 170px;
 	}
 }
 
 @media screen and (max-width: 500px) {
 	.skill-bar {
-		width: calc(200px - 4px - 40px);
-		height: calc(200px - 4px - 40px);
-		margin: 20px calc((100% - 156px) / 2);
+		width: 150px;
+	    height: 150px;
+		margin: 20px calc((100% - 150px) / 2);
 	}
 	.skill-bar > .name {
-		width: calc(200px - 4px - 40px - 6px);
-		height: calc(200px - 4px - 40px - 6px);
-		line-height: 155px;	
+		width: calc(150px - 4px);
+	    height: calc(150px - 4px);
+		line-height: 155px;
 	}
 	.skill-bar > .progress-line{
-		width: calc(200px - 4px - 40px);
-		height: calc(200px - 4px - 40px);
+		width: 150px;
+	    height: 150px;
 	}
 	.skill-bar > .cover-half{
-		width: calc(200px - 4px - 40px);
-		height: calc(200px - 4px - 40px);
+		width: 150px;
+	    height: 150px;
 	}
 }
 
@@ -757,7 +757,7 @@ form > input[type='text'], form > input[type='email'] {
 	display: inline;
 	margin: 0;
 	padding: 10px;
-	min-width: calc((100% / 2) - 22px - 7px);
+	width: calc((100% / 2) - 22px - 7px);
 	min-height: 30px;
 	font-family: "Lato-Regular", sans-serif;
 	border: 1px solid #DDDDDD;
@@ -814,13 +814,15 @@ form > input[type='submit'].sent:hover {
     background: #4981B9;
     cursor: default;
 }
-form > input[type='submit']:focus{ background: #4981B9; }
-form > input[type='reset']:focus{ background: #000000; }
+
 form > input[type='text']:hover{ background: #FFFFFF; }
 form > input[type='email']:hover{ background: #FFFFFF; }
+form > textarea:hover { background: #FFFFFF; }
+
+form > input[type='submit']:focus{ background: #4981B9; }
+form > input[type='reset']:focus{ background: #000000; }
 form > input[type='text']:focus{ background: #FFFFFF; }
 form > input[type='email']:focus{ background: #FFFFFF; }
-form > textarea:hover { background: #FFFFFF; }
 form > textarea:focus {	background: #FFFFFF; }
 
 @media screen and (max-width: 500px) {

@@ -59,7 +59,7 @@ header div.wrap-logo{
 	position: relative;
 	top: 20%;
 	margin: 0 auto;
-	width: 300px;
+	width: 310px;
 	text-align: center;
 	height: 90px;
 }
@@ -68,9 +68,10 @@ header div.hero-logo{
 	float: left;
 	width: 90px;
 	height: 90px;
+	margin-right: 20px;
 }
 
-header div.hero-logo > svg{
+header div.hero-logo > svg {
 	position: absolute;
 	display: inline-block;
 	width: 30px;
@@ -93,7 +94,6 @@ header h1.hero-slogan {
 	font-family: 'Comfortaa', cursive, sans-serif;
 	letter-spacing: -0.06em;
 	color: #FFFFFF;
-	padding-left: 20px;
 	padding-bottom: 0px;
 	font-size: 7rem;
     opacity: 0;
@@ -224,12 +224,6 @@ nav ul li a:hover {
 	color: #FFFFFF;
 }
 
-nav ul li a.small{
-    padding: 10px 0;
-    font-size: 1.2rem;
-}
-
-
 li.show-menu-button {
     display: none;
     height: 53px;
@@ -302,11 +296,6 @@ li.show-menu-button a {
     }
     li.show-menu-button a:hover{
         color: #FFFFFF;
-    }
-
-    nav ul li a.small{
-	    padding: 10px 0;
-    	font-size: 1.2rem;
     }
     
 }
@@ -496,7 +485,7 @@ article figure.right {
 .skill-bar {
 	width: 200px;
 	height: 200px;
-	margin: 60px 20px 20px 20px;
+	margin: 20px;
 	border-radius: 50%;
     background: #F8F8F8;
 }
@@ -860,17 +849,43 @@ footer {
 	width: 100%;
 	text-align: center;
 	color: #999999;
+	padding-top: 15px;
 }
 
-footer > p:first-child {
-	display: inline-block;
+footer > div:first-child {
+	position: relative;
+	width: 132px;
+	height: 32px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+footer > div > div.footer-logo {
+	float: left;
+	width: 32px;
+	height: 32px;
+	margin: 0;
+	padding: 0;
+}
+
+footer > div > p {
+	float: left;
 	font-family: "Comfortaa", sans-serif;
 	font-size: 2.8rem;
-	margin-top: 20px;
+	width: 100px;
+	margin: 0;
+	padding: 0;
+}
+
+footer > div > div.footer-logo > svg {
+	fill: #999999;
+	fill-opacity: 1;
 }
 
 footer > p.copyright {
 	display: block;
+	width: calc(100% - 20px);
 	font-style: italic;
 	font-family: "Montserrat-Light", sans-serif;
 	font-size: 1.2rem;

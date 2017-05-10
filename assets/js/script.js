@@ -124,11 +124,6 @@ function menuController() {
 		$('nav').removeClass('fixed');
         $('main').removeClass('fixed');
 	}
-//    if ($(window).scrollTop() >= $('.hero-image').height() + 100) {
-//        $('nav ul li a').addClass('small');
-//    } else {
-//        $('nav ul li a').removeClass('small');
-//    }
 }
 
 function showMobileMenu(isMenuHide) {

@@ -55,6 +55,17 @@ header.hero-image {
     transition: all .2s linear;
 }
 
+header > div.figure {
+	position: absolute;
+	top: 0px;
+	left: 50vw;
+	width: 1px;
+	height: 1px;
+	background: #F1F1F1;
+	border-radius: 50%;
+	opacity: 0;
+}
+
 header div.wrap-logo{
 	position: relative;
 	top: 20%;
@@ -743,7 +754,7 @@ article form {
 }
 
 form > input[type='text'], form > input[type='email'] {
-	display: inline;
+	display: inline-block;
 	margin: 0;
 	padding: 10px;
 	width: calc((100% / 2) - 22px - 7px);
@@ -761,7 +772,7 @@ form > input[type='email'] {
 }
 
 form > textarea {
-	display: inline;
+	display: inline-block;
 	padding: 10px;
 	min-width: calc(100% - 22px);
 	min-height: 100px;

@@ -160,6 +160,8 @@ function scroll_to(event, target) {
 	$(event).click(function () {
 		if (target === 'start') {
             $('html, body').animate({scrollTop: 0}, 700);
+            setTimeout(function () { hideHeroImageContent(); }, 700);
+            setTimeout(function () { showHeroImageContent(); }, 900);
         } else {
 			$('html, body').animate({scrollTop: $('#' + target).offset().top}, 700);
         }
@@ -170,6 +172,8 @@ function showAsideFigure() {
     "use strict";
     if ($(window).scrollTop() <= 0) {
         $('.fa-hashtag').removeClass('figure-normal');
+        hideHeroImageContent();
+        setTimeout(function() { showHeroImageContent(); }, 200);
     }
     if ($(window).scrollTop() + $(window).height() <= $('#oferta').offset().top) {
         $('.fa-cogs').removeClass('figure-normal');
@@ -211,6 +215,26 @@ function formController(sentMessage, defaultMessage) {
     });
 }
 
+function randFigures(numberOfElements){
+    var randomPosX, randomPosY;
+    for(var fig = 0; fig < numberOfElements; fig++){
+        $('.hero-image').append('<div class="figure" id="fig'+fig+'"></div>');
+        randomPosX = Math.floor((Math.random() * $(window).width() ));
+        randomPosY = Math.floor((Math.random() * $('.hero-image').height() ));
+        $('#fig'+fig).animate({top: randomPosY, left: randomPosX, opacity: 1}, 500);
+    }
+}
+
+function animatePositionOfFigures(numberOfElements) {
+    var randomPosX, randomPosY;
+    for(var fig = 0; fig < numberOfElements; fig++){
+        randomPosX = Math.floor((Math.random() * $(window).width() ));
+        randomPosY = Math.floor((Math.random() * $('.hero-image').height() ));
+        $('#fig'+fig).animate({top: randomPosY, left: randomPosX}, 20000, "linear");
+    }
+    // window.setTimeout(function() { animatePositionOfFigures(numberOfElements) }, 20000);
+}
+
 
 $(document).ready(function () {
     "use strict";
@@ -219,6 +243,10 @@ $(document).ready(function () {
 	menuController();
     mobileMenuController();
     hideMobileMenu();
+
+    var numberOfElements = 100;
+    randFigures(numberOfElements);
+    animatePositionOfFigures(numberOfElements);
 
 	scroll_to('nav > ul > li:nth-child(1)', 'start');
 	scroll_to('nav > ul > li:nth-child(2)', 'omnie');
@@ -233,10 +261,13 @@ $(document).ready(function () {
         showAsideFigure();
         showPictureOfGallery();
 	});
-	
+
+    
+
 	$('.hero-image').click(function () {
         hideHeroImageContent();
         setTimeout(function () { showHeroImageContent(); }, 500);
+        animatePositionOfFigures(numberOfElements);
     });
 
 	$('form').submit(function (e) {
@@ -250,6 +281,5 @@ $(document).ready(function () {
 			}
         });
 	});
-
-    
+  
 });

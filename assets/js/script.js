@@ -155,25 +155,24 @@ function mobileMenuController() {
     });
 }
 
-function scroll_to(event, target) {
+function scroll_to(target) {
     "use strict";
-	$(event).click(function () {
-		if (target === 'start') {
-            $('html, body').animate({scrollTop: 0}, 700);
-            setTimeout(function () { hideHeroImageContent(); }, 700);
-            setTimeout(function () { showHeroImageContent(); }, 900);
-        } else {
-			$('html, body').animate({scrollTop: $('#' + target).offset().top}, 700);
-        }
-	});
+    if(target === 'start') {
+        $('html, body').animate({scrollTop: 0}, 700);
+        setTimeout(function () { hideHeroImageContent(); }, 700);
+        setTimeout(function () { showHeroImageContent(); }, 900);
+    } else {
+        $('html, body').animate({scrollTop: $('#' + target).offset().top}, 700);
+    }
 }
 
-function showAsideFigure() {
+function showAsideFigure(numberOfElements) {
     "use strict";
     if ($(window).scrollTop() <= 0) {
         $('.fa-hashtag').removeClass('figure-normal');
         hideHeroImageContent();
         setTimeout(function() { showHeroImageContent(); }, 200);
+        animatePositionOfFigures(numberOfElements);
     }
     if ($(window).scrollTop() + $(window).height() <= $('#oferta').offset().top) {
         $('.fa-cogs').removeClass('figure-normal');
@@ -216,23 +215,27 @@ function formController(sentMessage, defaultMessage) {
 }
 
 function randFigures(numberOfElements){
-    var randomPosX, randomPosY;
-    for(var fig = 0; fig < numberOfElements; fig++){
-        $('.hero-image').append('<div class="figure" id="fig'+fig+'"></div>');
-        randomPosX = Math.floor((Math.random() * $(window).width() ));
-        randomPosY = Math.floor((Math.random() * $('.hero-image').height() ));
-        $('#fig'+fig).animate({top: randomPosY, left: randomPosX, opacity: 1}, 500);
+    if($(window).width() > 850){
+        var randomPosX, randomPosY;
+        for(var fig = 0; fig < numberOfElements; fig++){
+            $('.hero-image').append('<div class="figure" id="fig'+fig+'"></div>');
+            randomPosX = Math.floor((Math.random() * $(window).width() ));
+            randomPosY = Math.floor((Math.random() * $('.hero-image').height() ));
+            $('#fig'+fig).animate({top: randomPosY, left: randomPosX, opacity: 1}, 500);
+        }
     }
 }
 
 function animatePositionOfFigures(numberOfElements) {
-    var randomPosX, randomPosY;
-    for(var fig = 0; fig < numberOfElements; fig++){
-        randomPosX = Math.floor((Math.random() * $(window).width() ));
-        randomPosY = Math.floor((Math.random() * $('.hero-image').height() ));
-        $('#fig'+fig).animate({top: randomPosY, left: randomPosX}, 20000, "linear");
+    if($(window).width() > 850){
+        var randomPosX, randomPosY;
+        for(var fig = 0; fig < numberOfElements; fig++){
+            randomPosX = Math.floor((Math.random() * $(window).width() ));
+            randomPosY = Math.floor((Math.random() * $('.hero-image').height() ));
+            $('#fig'+fig).animate({top: randomPosY, left: randomPosX}, 10000, "linear");
+        }
+        // window.setTimeout(function() { animatePositionOfFigures(numberOfElements) }, 10000);
     }
-    // window.setTimeout(function() { animatePositionOfFigures(numberOfElements) }, 20000);
 }
 
 
@@ -244,21 +247,22 @@ $(document).ready(function () {
     mobileMenuController();
     hideMobileMenu();
 
-    var numberOfElements = 100;
-    randFigures(numberOfElements);
-    animatePositionOfFigures(numberOfElements);
+    var numberOfElements = 50;
+    setTimeout(function() { 
+        randFigures(numberOfElements);
+        animatePositionOfFigures(numberOfElements);
+    }, 1000);
 
-	scroll_to('nav > ul > li:nth-child(1)', 'start');
-	scroll_to('nav > ul > li:nth-child(2)', 'omnie');
-	scroll_to('nav > ul > li:nth-child(3)', 'oferta');
-	scroll_to('nav > ul > li:nth-child(4)', 'referencje');
-	scroll_to('nav > ul > li:nth-child(5)', 'projekty');
-	scroll_to('nav > ul > li:nth-child(6)', 'pytania');
+
+    $('nav > ul > li').find('a').click( function() { 
+        scroll_to(this.hash.replace('#',''));
+        $('a[href=#'+this.hash+']').parent().addClass('active');
+    });
 
 	$(window).scroll(function () {
 		menuController();
 		showSkillProgress();
-        showAsideFigure();
+        showAsideFigure(numberOfElements);
         showPictureOfGallery();
 	});
 

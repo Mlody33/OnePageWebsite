@@ -65,7 +65,6 @@ header > div.figure {
 	border-radius: 50%;
 	opacity: 0;
 }
-
 header div.wrap-logo{
 	position: relative;
 	top: 20%;
@@ -233,6 +232,10 @@ nav ul li a:hover:before{
 
 nav ul li a:hover {
 	color: #FFFFFF;
+}
+
+.active {
+	color: red;
 }
 
 li.show-menu-button {

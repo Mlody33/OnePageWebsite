@@ -232,7 +232,7 @@ function animatePositionOfFigures(numberOfElements) {
         for(var fig = 0; fig < numberOfElements; fig++){
             randomPosX = Math.floor((Math.random() * $(window).width() ));
             randomPosY = Math.floor((Math.random() * $('.hero-image').height() ));
-            $('#fig'+fig).animate({top: randomPosY, left: randomPosX}, 10000, "linear");
+            $('#fig'+fig).animate({top: randomPosY, left: randomPosX}, 10000);
         }
         // window.setTimeout(function() { animatePositionOfFigures(numberOfElements) }, 10000);
     }
@@ -247,7 +247,7 @@ $(document).ready(function () {
     mobileMenuController();
     hideMobileMenu();
 
-    var numberOfElements = 50;
+    var numberOfElements = 20;
     setTimeout(function() { 
         randFigures(numberOfElements);
         animatePositionOfFigures(numberOfElements);

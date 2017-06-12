@@ -166,13 +166,12 @@ function scroll_to(target) {
     }
 }
 
-function showAsideFigure(numberOfElements) {
+function showAsideFigure() {
     "use strict";
     if ($(window).scrollTop() <= 0) {
         $('.fa-hashtag').removeClass('figure-normal');
         hideHeroImageContent();
         setTimeout(function() { showHeroImageContent(); }, 200);
-        animatePositionOfFigures(numberOfElements);
     }
     if ($(window).scrollTop() + $(window).height() <= $('#oferta').offset().top) {
         $('.fa-cogs').removeClass('figure-normal');
@@ -214,31 +213,6 @@ function formController(sentMessage, defaultMessage) {
     });
 }
 
-function randFigures(numberOfElements){
-    if($(window).width() > 850){
-        var randomPosX, randomPosY;
-        for(var fig = 0; fig < numberOfElements; fig++){
-            $('.hero-image').append('<div class="figure" id="fig'+fig+'"></div>');
-            randomPosX = Math.floor((Math.random() * $(window).width() ));
-            randomPosY = Math.floor((Math.random() * $('.hero-image').height() ));
-            $('#fig'+fig).animate({top: randomPosY, left: randomPosX, opacity: 1}, 500);
-        }
-    }
-}
-
-function animatePositionOfFigures(numberOfElements) {
-    if($(window).width() > 850){
-        var randomPosX, randomPosY;
-        for(var fig = 0; fig < numberOfElements; fig++){
-            randomPosX = Math.floor((Math.random() * $(window).width() ));
-            randomPosY = Math.floor((Math.random() * $('.hero-image').height() ));
-            $('#fig'+fig).animate({top: randomPosY, left: randomPosX}, 10000);
-        }
-        // window.setTimeout(function() { animatePositionOfFigures(numberOfElements) }, 10000);
-    }
-}
-
-
 $(document).ready(function () {
     "use strict";
     showHeroImageContent();
@@ -247,22 +221,14 @@ $(document).ready(function () {
     mobileMenuController();
     hideMobileMenu();
 
-    var numberOfElements = 20;
-    setTimeout(function() { 
-        randFigures(numberOfElements);
-        animatePositionOfFigures(numberOfElements);
-    }, 1000);
-
-
     $('nav > ul > li').find('a').click( function() { 
         scroll_to(this.hash.replace('#',''));
-        $('a[href=#'+this.hash+']').parent().addClass('active');
     });
 
 	$(window).scroll(function () {
 		menuController();
 		showSkillProgress();
-        showAsideFigure(numberOfElements);
+        showAsideFigure();
         showPictureOfGallery();
 	});
 
@@ -271,7 +237,6 @@ $(document).ready(function () {
 	$('.hero-image').click(function () {
         hideHeroImageContent();
         setTimeout(function () { showHeroImageContent(); }, 500);
-        animatePositionOfFigures(numberOfElements);
     });
 
 	$('form').submit(function (e) {

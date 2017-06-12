@@ -235,10 +235,6 @@ nav ul li a:hover {
 	color: #FFFFFF;
 }
 
-.active {
-	color: red;
-}
-
 li.show-menu-button {
     display: none;
     height: 53px;

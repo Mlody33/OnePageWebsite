@@ -59,13 +59,13 @@ header > div.figure {
 	position: absolute;
 	top: 0px;
 	left: 50vw;
-	width: 1px;
-	height: 1px;
+	width: 2px;
+	height: 2px;
 	background: #F1F1F1;
 	border-radius: 50%;
+    filter: blur(.5px);
 	opacity: 0;
 }
-
 header div.wrap-logo{
 	position: relative;
 	top: 20%;
@@ -869,7 +869,8 @@ footer > div:first-child {
 	height: 32px;
 	text-align: center;
 	margin: 0 auto;
-	padding: 10px;
+    padding: 10px;
+    color: #999999;
 }
 
 footer > div > div.footer-logo {

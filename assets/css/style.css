@@ -703,6 +703,21 @@ section > div > a:hover{
     background: #4981B9;
 }
 
+div.popup {
+	position: fixed;
+	top: 55px;
+	left: 100vw;
+	background-image: url("../img/10.jpg");
+	width: 100vw;
+	height: calc(100vh - 55px);
+	z-index: 10;
+	transition: all .9s ease-in-out;
+}
+div.visible {
+	top: 55px;
+	left: 0px;
+}
+
 @media screen and (max-width: 700px){
     section > div.single-picture{
         float: left;
@@ -717,7 +732,17 @@ section > div > a:hover{
     section > div > a{
         top: 150px;
         width: 30%;
-    }
+	}
+}
+
+@media screen and (max-width: 850px){
+	div.popup, div.visible {
+		top: 0px;
+	}
+	div.popup {
+		height: 100vh;
+		transition: all .5s ease-in-out;
+	}
 }
 
 /*CONTACT ************************************ */

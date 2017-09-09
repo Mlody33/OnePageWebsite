@@ -663,6 +663,14 @@ section > div.show-single-picture{
 	opacity: 1;
 }
 
+section > div.enlarge-single-picture {
+	width: calc((((100% - 30px) / 3) - 2px - 40px) + 80px * 2);
+}
+
+section > div.reduce-single-picture{
+	width: calc((((100% - 30px) / 3) - 2px - 40px) - 80px);
+}
+
 section > div.single-picture:nth-child(1){ background-image: url('../img/3.jpg'); }
 section > div.single-picture:nth-child(2){ background-image: url('../img/9.jpg'); }
 section > div.single-picture:nth-child(3){ background-image: url('../img/10.jpg');	margin-right: 0px; }
@@ -703,16 +711,6 @@ section > div > a:hover{
     background: #4981B9;
 }
 
-div.popup {
-	position: fixed;
-	top: 55px;
-	left: 100vw;
-	background-image: url("../img/10.jpg");
-	width: 100vw;
-	height: calc(100vh - 55px);
-	z-index: 10;
-	transition: all .9s ease-in-out;
-}
 div.visible {
 	top: 55px;
 	left: 0px;

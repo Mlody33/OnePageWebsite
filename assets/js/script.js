@@ -237,7 +237,7 @@ $(document).ready(function () {
             type: 'POST',
             data: $(this).serialize(),
             success: function (data) {
-                formController("Wiadomość wysłana", "Wyślij");
+                formController("Wiadomość została wysłana", "Wyślij");
 			}
         });
 	});

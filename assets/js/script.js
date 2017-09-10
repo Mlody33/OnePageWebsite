@@ -35,6 +35,7 @@ function focusLogo(speed) {
     randomNumber = Math.floor((Math.random() * 1000) + 200);
 	$('.hero-logo > svg:nth-child(9)').delay(randomNumber).animate({opacity: 1, top: 58, left: 58}, speed);
 }
+
 function showSkillProgress() {
     "use strict";
     if ($(window).scrollTop() + $(window).height() <= $('#referencje').offset().top) {
@@ -55,41 +56,6 @@ function showSkillProgress() {
 		$('#skill-php > .progress-line').addClass('rotate-75');
 		$('#skill-sql > .progress-line').addClass('rotate-90');
     }
-}
-
-function imagesSlider(szybkosc) {
-    "use strict";
-	var image_data = [1, 2, 3, 4, 5, 6],
-        i = 0;
-
-	$('section.gallery-slider > div#next').click(function () {
-		$('section > div.wrap-slider > img:last-child').animate({left: '110%', opacity: 0}, 0, function () {
-            if (i > image_data.length - 2) {
-                i = -1;
-            }
-            i += 1;
-            $(this).attr('src', 'assets/img/' + image_data[i] + '.jpg');
-			$(this).animate({left: 0, opacity: 1}, szybkosc, function () {
-				$('section > div.wrap-slider > img:first-child').attr('src', 'assets/img/' + image_data[i] + '.jpg');
-				$(this).css({left: '110%'});
-			});
-        });
-    });
-
-	$('section.gallery-slider > div#previus').click(function () {
-		$('section > div.wrap-slider > img:last-child').animate({left: '-110%', opacity: 0}, 0, function () {
-            if (i <= 0) {
-                i = 6;
-            }
-            i -= 1;
-			$(this).attr('src', 'assets/img/' + image_data[i] + '.jpg');
-			$(this).animate({left: 0, opacity: 1}, szybkosc, function () {
-				$('section > div.wrap-slider > img:first-child').attr('src', 'assets/img/' + image_data[i] + '.jpg');
-				$(this).css({left: '-110%'});
-			});
-        });
-    });
-
 }
 
 function hideHeroImageContent() {
@@ -166,6 +132,25 @@ function scroll_to(target) {
     }
 }
 
+function load_preview_of_image(target) {
+    "use strict";
+    $('section > div.single-picture').removeClass("reduce-single-picture").removeClass("enlarge-single-picture");
+    switch(target){
+        case "img1":
+            $('section > div.single-picture:nth-child(n+2)').addClass("reduce-single-picture");
+            $('section > div.single-picture:nth-child(1)').addClass("enlarge-single-picture");
+            break;
+        case "img2":
+            $('section > div.single-picture:nth-child(2n-1)').addClass("reduce-single-picture");
+            $('section > div.single-picture:nth-child(2)').addClass("enlarge-single-picture");
+            break;
+        case "img3":
+            $('section > div.single-picture:nth-child(-n+2)').addClass("reduce-single-picture");
+            $('section > div.single-picture:nth-child(3)').addClass("enlarge-single-picture");
+            break;
+    }
+}
+
 function showAsideFigure() {
     "use strict";
     if ($(window).scrollTop() <= 0) {
@@ -216,13 +201,21 @@ function formController(sentMessage, defaultMessage) {
 $(document).ready(function () {
     "use strict";
     showHeroImageContent();
-	imagesSlider(500);
 	menuController();
     mobileMenuController();
     hideMobileMenu();
 
     $('nav > ul > li').find('a').click( function() { 
+        $('div.popup').removeClass('visible');
         scroll_to(this.hash.replace('#',''));
+    });
+
+    $('.gallery > .single-picture').find('a').mouseover( function() {
+        load_preview_of_image(this.hash.replace('#',''));
+    });
+
+    $('.gallery').mouseleave( function() {
+        $('section > div.single-picture').removeClass("reduce-single-picture").removeClass("enlarge-single-picture");
     });
 
 	$(window).scroll(function () {
@@ -231,8 +224,6 @@ $(document).ready(function () {
         showAsideFigure();
         showPictureOfGallery();
 	});
-
-    
 
 	$('.hero-image').click(function () {
         hideHeroImageContent();
@@ -246,7 +237,7 @@ $(document).ready(function () {
             type: 'POST',
             data: $(this).serialize(),
             success: function (data) {
-                formController("Wiadomość wysłana", "Wyślij");
+                formController("Wiadomość została wysłana", "Wyślij");
 			}
         });
 	});

@@ -222,6 +222,8 @@ nav ul li a:hover {
 	color: #FFFFFF;
 }
 
+
+
 li.show-menu-button {
     display: none;
     height: 53px;
@@ -247,6 +249,11 @@ li.show-menu-button a {
 	transition: all .15s linear;
 }
 
+@supports (-ms-ime-align:auto) {
+	nav ul li:last-child {
+		width: calc(100% / 6 - 0.5px);
+	}
+}
 
 @media screen and (max-width: 850px){
     main, main.fixed {
@@ -270,7 +277,7 @@ li.show-menu-button a {
     
     nav ul li {
 		float: left;
-		width: 100%;
+		width: 100% !important;
         border-bottom: 2px solid #333333;
         height: calc((100vh - 65px) / 6);
 	}

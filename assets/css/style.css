@@ -714,7 +714,7 @@ section > div > a:hover {
     background: #4981B9;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 740px){
     section > div.single-picture{
         float: left !important;
         width: calc(100% - 2px - 40px) !important;

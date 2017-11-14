@@ -198,12 +198,25 @@ function formController(sentMessage, defaultMessage) {
     });
 }
 
+function loadContentFromFile() {
+    "use strict"
+    jQuery.get('http://localhost/mzapWebsite/assets/pages/home-h3.txt', function(data) {
+        $('div#omnie > article > aside > h3').html(data);
+    });
+    
+    jQuery.get('http://localhost/mzapWebsite/assets/pages/home-p.txt', function(data) {
+        $('div#omnie > article > aside > p').html(data);
+    });
+}
+
 $(document).ready(function () {
     "use strict";
     showHeroImageContent();
 	menuController();
     mobileMenuController();
     hideMobileMenu();
+    loadContentFromFile();
+    
 
     $('nav > ul > li').find('a').click( function() { 
         $('div.popup').removeClass('visible');

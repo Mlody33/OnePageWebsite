@@ -665,9 +665,9 @@ section > div.reduce-single-picture{
 	transform: scale(0.92);
 }
 
-section > div.single-picture:nth-child(1){ background-image: url('../img/3.jpg'); }
-section > div.single-picture:nth-child(2){ background-image: url('../img/9.jpg'); }
-section > div.single-picture:nth-child(3){ background-image: url('../img/10.jpg');	margin-right: 0px; }
+section > div.single-picture:nth-child(1){ background-image: url('../img/progressive/3.jpg'); }
+section > div.single-picture:nth-child(2){ background-image: url('../img/progressive/9.jpg'); }
+section > div.single-picture:nth-child(3){ background-image: url('../img/progressive/10.jpg');	margin-right: 0px; }
 
 section > div > p{
 	position: relative;

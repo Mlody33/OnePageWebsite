@@ -73,12 +73,11 @@ function showHeroImageContent() {
         focusLogo(100);
     }, 500);
     setTimeout(function () {
-        $('h1.hero-slogan').addClass('typing-effect');
         $('h1.hero-slogan').addClass('show');
-    }, 600);
+    }, 1700);
     setTimeout(function () {
         $('header > h2').addClass('show');
-    }, 1000);
+    }, 1700);
 }
 
 function menuController() {
@@ -225,7 +224,7 @@ $(document).ready(function () {
 	menuController();
     mobileMenuController();
     hideMobileMenu();
-    loadContentFromFile ();
+    loadContentFromFile();
 
     $('nav > ul > li').find('a').click( function() { 
         $('div.popup').removeClass('visible');

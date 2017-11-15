@@ -88,41 +88,23 @@ header div.hero-logo > svg:nth-child(8){ top: 61px; left: 30px; }
 header div.hero-logo > svg:nth-child(9){ top: 58px; left: 58px; }
 
 header h1.hero-slogan {
-	float: left;
+	position: relative;
+	left: -80px;
+	top: 0;
 	font-family: 'Comfortaa', cursive, sans-serif;
 	letter-spacing: -0.06em;
 	color: #FFFFFF;
 	padding-bottom: 0px;
 	font-size: 7rem;
-    opacity: 0;
+	opacity: 0;
+	transform: scale(0.9);
     transition: all .2s linear;
 }
 
-header h1.typing-effect {
-    overflow: hidden;
-    margin: 0 auto;
-    border-right: .10em solid transparent;
-    white-space: nowrap;
-    animation:
-      typing 1s .6s steps(1, end),
-      blink-caret .75s step-end 6;
-}
-
 header h1.show{
-    opacity: 1;
-}
-
-@keyframes typing {
-    0% { width: 0px; }
-    25% { width: 65px; }
-    50% { width: 98px; }
-    75% { width: 140px; }
-    100% { width: 190px; }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #FFFFFF; }
+	opacity: 1;
+	left: 0;
+	transform: scale(1);
 }
 
 header > h2 {

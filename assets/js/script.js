@@ -60,9 +60,8 @@ function showSkillProgress() {
 
 function hideHeroImageContent() {
     "use strict";
-    unfocusLogo(100);
+    unfocusLogo(200);
     $('h1.hero-slogan').removeClass('show');
-    $('h1.hero-slogan').removeClass('typing-effect');
     $('header > h2').removeClass('show');
 }
 

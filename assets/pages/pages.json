@@ -1,0 +1,22 @@
+{
+    "website": "mzap",
+    "welcometext": "Aenean ut libero porta, vulputate dui non, faucibus orci. Praesent sagittis sed lectus sit amet ornare. Cras nisi lorem, pulvinar tempus cursus nec, hendrerit nec turpis.",
+    "home": {
+        "h": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac erat erat. Sed aliquet cursus eros, quis feugiat sapien sollicitudin id. Nulla tincidunt sit amet metus a tincidunt",
+        "p": "Aenean ut libero porta, vulputate dui non, faucibus orci. Praesent sagittis sed lectus sit amet ornare. Cras nisi lorem, pulvinar tempus cursus nec, hendrerit nec turpis. Mauris vel purus id eros volutpat mollis. Ut suscipit, tortor ac varius viverra, ipsum diam porta leo, molestie tempus justo enim eu tellus. Morbi condimentum posuere purus, vitae pulvinar leo placerat in. Fusce feugiat ipsum eu lorem luctus, ac rhoncus dui vestibulum. Morbi interdum libero ut erat aliquet ornare eu a mi. Nullam tellus lectus, auctor vel nunc sit amet, cursus blandit dui. Phasellus ultrices nibh eu pharetra bibendum. Nam et lacinia eros."
+    },
+    "aboutme": {
+        "h1": "Integer non mollis dolor. Phasellus viverra mauris et sapien placerat, in finibus lorem ultricies. Nam eu semper lorem, nec scelerisque metus. Sed placerat efficitur ornare.",
+        "p1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel malesuada eros, ut rutrum ipsum. Integer non mollis dolor. Phasellus viverra mauris et sapien placerat, in finibus lorem ultricies. Nam eu semper lorem, nec scelerisque metus. Sed placerat efficitur ornare. Donec pharetra, velit nec auctor faucibus, nibh ante facilisis nunc, eu pharetra libero nisl at nibh. Morbi eleifend pellentesque egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla nec metus nec aliquet. Praesent consequat ipsum arcu, et posuere lectus ultricies ut.",
+        "h2": "Sed placerat efficitur ornare. Donec pharetra, velit nec auctor faucibus, nibh ante facilisis nunc, eu pharetra libero nisl at nibh. Morbi eleifend pellentesque egestas.",
+        "p2": "Nunc vehicula, sapien a interdum posuere, orci purus vestibulum quam, a commodo nunc quam sed nisi. Maecenas tristique, dui at ultricies iaculis, felis neque consequat dui, id blandit nisl dui at erat. Duis vel lacus eleifend, vulputate nibh quis, maximus dui. Morbi iaculis augue vitae magna molestie egestas. Morbi posuere turpis eu mauris aliquet, sit amet vehicula eros ultricies. Nam mollis tellus ex, quis semper nulla dictum quis. Nunc sagittis ligula eu enim cursus iaculis. Sed mollis diam id aliquet lacinia. Maecenas risus lectus, cursus sed facilisis eu, consequat quis magna. In dapibus quam in massa pulvinar, eget varius felis imperdiet. Pellentesque cursus ullamcorper bibendum."
+    },
+    "reference": {
+        "stage1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut sapien lobortis, pretium tellus at, ullamcorper libero. Nullam dictum est mi, et rutrum dui pretium vitae. Duis tempus mauris ac dapibus tincidunt. Nam porta tellus quis neque pulvinar volutpat. Aliquam orci arcu, vulputate vel convallis ut, sodales nec leo",
+        "stage2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut sapien lobortis, pretium tellus at, ullamcorper libero. Nullam dictum est mi, et rutrum dui pretium vitae. Duis tempus mauris ac dapibus tincidunt. Nam porta tellus quis neque pulvinar volutpat. Aliquam orci arcu, vulputate vel convallis ut, sodales nec leo",
+        "stage3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut sapien lobortis, pretium tellus at, ullamcorper libero. Nullam dictum est mi, et rutrum dui pretium vitae. Duis tempus mauris ac dapibus tincidunt. Nam porta tellus quis neque pulvinar volutpat. Aliquam orci arcu, vulputate vel convallis ut, sodales nec leo"
+    },
+    "projects": {
+        "preface": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia accumsan blandit. Phasellus ornare sapien sit amet velit congue ornare. Quisque eget sem at dolor porttitor posuere vulputate vitae ipsum. Phasellus tempor tempor nibh, eget ullamcorper mi lobortis ac. Suspendisse tincidunt elementum blandit. Suspendisse auctor venenatis massa vitae posuere. Donec."
+    }
+}

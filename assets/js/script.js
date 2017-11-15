@@ -200,12 +200,22 @@ function formController(sentMessage, defaultMessage) {
 
 function loadContentFromFile() {
     "use strict"
-    jQuery.get('http://localhost/mzapWebsite/assets/pages/home-h3.txt', function(data) {
-        $('div#omnie > article > aside > h3').html(data);
-    });
-    
-    jQuery.get('http://localhost/mzapWebsite/assets/pages/home-p.txt', function(data) {
-        $('div#omnie > article > aside > p').html(data);
+    $.getJSON( "assets/pages/pages.json", function( data ) {
+        $('header > h2').html(data.welcometext);
+
+        $('div#omnie > article > aside > h3').html(data.home.h);
+        $('div#omnie > article > aside > p').html(data.home.p);
+
+        $('div#oferta > article > aside > h3:first-child').html(data.aboutme.h1);
+        $('div#oferta > article > aside > p:nth-child(2)').html(data.aboutme.p1);
+        $('div#oferta > article > aside > h3:nth-child(3)').html(data.aboutme.h2);
+        $('div#oferta > article > aside > p:last-child').html(data.aboutme.p2);
+
+        $('div#referencje > article > div.skill-content:nth-child(2) > p').html(data.reference.stage1);
+        $('div#referencje > article > div.skill-content:nth-child(3) > p').html(data.reference.stage2);
+        $('div#referencje > article > div.skill-content:nth-child(4) > p').html(data.reference.stage3);
+
+        $('div#projekty > article > p').html(data.projects.preface);
     });
 }
 
@@ -215,8 +225,7 @@ $(document).ready(function () {
 	menuController();
     mobileMenuController();
     hideMobileMenu();
-    loadContentFromFile();
-    
+    loadContentFromFile ();
 
     $('nav > ul > li').find('a').click( function() { 
         $('div.popup').removeClass('visible');

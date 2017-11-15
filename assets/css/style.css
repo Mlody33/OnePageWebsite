@@ -88,41 +88,25 @@ header div.hero-logo > svg:nth-child(8){ top: 61px; left: 30px; }
 header div.hero-logo > svg:nth-child(9){ top: 58px; left: 58px; }
 
 header h1.hero-slogan {
-	float: left;
+	position: relative;
+	left: -90px;
+	top: 0;
 	font-family: 'Comfortaa', cursive, sans-serif;
 	letter-spacing: -0.06em;
 	color: #FFFFFF;
 	padding-bottom: 0px;
 	font-size: 7rem;
-    opacity: 0;
+	opacity: 0;
+	transform: scaleX(0.9);
+	transform: scaleY(0.5);
     transition: all .2s linear;
 }
 
-header h1.typing-effect {
-    overflow: hidden;
-    margin: 0 auto;
-    border-right: .10em solid transparent;
-    white-space: nowrap;
-    animation:
-      typing 1s .6s steps(1, end),
-      blink-caret .75s step-end 6;
-}
-
 header h1.show{
-    opacity: 1;
-}
-
-@keyframes typing {
-    0% { width: 0px; }
-    25% { width: 65px; }
-    50% { width: 98px; }
-    75% { width: 140px; }
-    100% { width: 190px; }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #FFFFFF; }
+	opacity: 1;
+	left: 0;
+	transform: scaleY(1);
+	transform: scaleX(1);
 }
 
 header > h2 {
@@ -197,6 +181,10 @@ nav ul li a {
 	transition: all .15s linear;
 }
 
+nav ul li a i {
+	margin-right: 10px;
+}
+
 nav ul li a:before {
 	content: "";
 	position: absolute;
@@ -221,6 +209,8 @@ nav ul li a:hover:before{
 nav ul li a:hover {
 	color: #FFFFFF;
 }
+
+
 
 li.show-menu-button {
     display: none;
@@ -247,6 +237,11 @@ li.show-menu-button a {
 	transition: all .15s linear;
 }
 
+@supports (-ms-ime-align:auto) {
+	nav ul li:last-child {
+		width: calc(100% / 6 - 0.5px);
+	}
+}
 
 @media screen and (max-width: 850px){
     main, main.fixed {
@@ -270,7 +265,7 @@ li.show-menu-button a {
     
     nav ul li {
 		float: left;
-		width: 100%;
+		width: 100% !important;
         border-bottom: 2px solid #333333;
         height: calc((100vh - 65px) / 6);
 	}
@@ -707,7 +702,7 @@ section > div > a:hover {
     background: #4981B9;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 740px){
     section > div.single-picture{
         float: left !important;
         width: calc(100% - 2px - 40px) !important;

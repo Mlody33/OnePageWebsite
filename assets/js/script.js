@@ -60,9 +60,8 @@ function showSkillProgress() {
 
 function hideHeroImageContent() {
     "use strict";
-    unfocusLogo(100);
+    unfocusLogo(200);
     $('h1.hero-slogan').removeClass('show');
-    $('h1.hero-slogan').removeClass('typing-effect');
     $('header > h2').removeClass('show');
 }
 
@@ -73,12 +72,11 @@ function showHeroImageContent() {
         focusLogo(100);
     }, 500);
     setTimeout(function () {
-        $('h1.hero-slogan').addClass('typing-effect');
         $('h1.hero-slogan').addClass('show');
-    }, 600);
+    }, 1700);
     setTimeout(function () {
         $('header > h2').addClass('show');
-    }, 1000);
+    }, 1700);
 }
 
 function menuController() {
@@ -198,12 +196,34 @@ function formController(sentMessage, defaultMessage) {
     });
 }
 
+function loadContentFromFile() {
+    "use strict"
+    $.getJSON( "assets/pages/pages.json", function( data ) {
+        $('header > h2').html(data.welcometext);
+
+        $('div#omnie > article > aside > h3').html(data.home.h);
+        $('div#omnie > article > aside > p').html(data.home.p);
+
+        $('div#oferta > article > aside > h3:first-child').html(data.aboutme.h1);
+        $('div#oferta > article > aside > p:nth-child(2)').html(data.aboutme.p1);
+        $('div#oferta > article > aside > h3:nth-child(3)').html(data.aboutme.h2);
+        $('div#oferta > article > aside > p:last-child').html(data.aboutme.p2);
+
+        $('div#referencje > article > div.skill-content:nth-child(2) > p').html(data.reference.stage1);
+        $('div#referencje > article > div.skill-content:nth-child(3) > p').html(data.reference.stage2);
+        $('div#referencje > article > div.skill-content:nth-child(4) > p').html(data.reference.stage3);
+
+        $('div#projekty > article > p').html(data.projects.preface);
+    });
+}
+
 $(document).ready(function () {
     "use strict";
     showHeroImageContent();
 	menuController();
     mobileMenuController();
     hideMobileMenu();
+    loadContentFromFile();
 
     $('nav > ul > li').find('a').click( function() { 
         $('div.popup').removeClass('visible');
